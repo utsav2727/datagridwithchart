@@ -58,7 +58,7 @@ export default function CustomTableWithLargeData({rows}) {
         rows={rows}
         columns={columns.map((column) => ({
           ...column,
-          headerCheckboxSelection: false, // Hide checkbox in the header
+          headerCheckboxSelection: false, 
         }))}
         initialState={{
           pagination: {
