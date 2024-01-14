@@ -17,7 +17,7 @@ const Plots = () => {
       ];
     
       const layout = {
-        title: 'Simple Bar Chart',
+        title: 'Bar Chart',
         xaxis: { title: 'name' },
         yaxis: { title: 'age' },
       }; 

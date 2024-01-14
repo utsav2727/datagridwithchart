@@ -56,7 +56,10 @@ export default function CustomTableWithLargeData({rows}) {
       <DataGrid
         rowHeight={40}
         rows={rows}
-        columns={columns}
+        columns={columns.map((column) => ({
+          ...column,
+          headerCheckboxSelection: false, // Hide checkbox in the header
+        }))}
         initialState={{
           pagination: {
             paginationModel: {
@@ -67,6 +70,7 @@ export default function CustomTableWithLargeData({rows}) {
         pageSizeOptions={[10]}
         checkboxSelection
         disableRowSelectionOnClick
+        disableSelectionOnClick
         // onRowSelectionModelChange={(ids) => onRowsSelectionHandler(ids)}
         // rowSelectionModel={selectionModel}
       />
